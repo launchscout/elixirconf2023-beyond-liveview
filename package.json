@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run watch & live-server .",
+    "demo": "live-server ./airport_map.html",
     "watch": "marp --watch index.md -o index.html",
     "build": "marp index.md -o index.html"
   },
