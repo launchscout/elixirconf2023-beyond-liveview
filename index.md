@@ -36,18 +36,25 @@ style: |
 
 ![bg right contain](./matched-edge.png)
 # Beyond LiveView
-### Chris Nelson
+### Getting the Javascript you need, keeping the Elixir you love
+Chris Nelson
 ![h:200](full-color.png#title-slide-logo)
 
 ---
 
-# The two scenarios:
-- We need to extend our LiveView app with some Javascript
-- We are building an app that isn't served by Elixir
+# Who am I?
+- Long-time (old) Elixirist
+- Co-Founder of Launch Scout
+- Creator LiveElements and LiveState
 
 ---
 
-# We got a long way to go and a short time to get there...
+# When would we want to go Beyond LiveView?
+## The two scenarios:
+- We need to extend our LiveView app with some Javascript
+  - There's a good JS solution we just wanna use
+  - Doing something client side is just the right move
+- We are building an app that isn't served by Elixir
 
 ---
 
@@ -62,10 +69,42 @@ style: |
 
 ---
 
-# A better way
+# A better way to bridge to JS
 - Custom HTML Elements
+- LiveView already renders HTML
 - A better unit of abstraction
+  - higher level
+  - more declarative
 - Data in, actions out
+
+---
+
+# Babby's first element
+```html
+<html>
+  <head>
+    <script>
+      class SayBoopElement extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `Boop!`
+        }
+      }
+      customElements.define('say-boop', SayBoopElement);
+    </script>
+  </head>
+  <body>
+    <say-boop></say-boop>
+  </body>
+</html>
+
+```
+---
+
+# Custom Element superpowers
+- Shadow DOM
+- Slots
+- Shadow parts
+- Custom events
 
 ---
 
@@ -136,6 +175,10 @@ style: |
 ```
 ---
 
+# Scenario the second
+
+---
+
 # Extending the reach of Elixir
 
 ---
@@ -149,6 +192,10 @@ style: |
 ---
 
 # What percentage of websites use HTML?
+
+---
+
+# What if the only requirement to deploy our Elixir app was an HTML element?
 
 ---
 
@@ -264,7 +311,23 @@ end
 
 ---
 
+# But wait, there's [more](https://turbo-space-fishstick-j4jjg6q2g94.github.dev/)
+
+---
+
 # Livestate in the wild
+
+---
+
+# [LiveRoom](https://github.com/liveroom-app)
+
+---
+
+# [PatientReach360](https://patientreach360-dev.fly.dev/example_sites/c80196d7-78b8-4106-98d3-5bff87dd0b2d)
+
+---
+
+# [Launch Elements](https://elements.launchscout.com)
 
 ---
 
