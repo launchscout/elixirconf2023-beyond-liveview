@@ -108,6 +108,13 @@ Chris Nelson
 
 ---
 
+# You might want a library, but you don't need a framework
+- Vanilla spec is a bit low level
+- Lit is my current fave, but I am *not* committed
+- Custom elements are just DOM nodes, mix n match all ya want
+
+---
+
 # How to do?
 - Data passed in via attributes
 - Might need to serialize em tho
@@ -130,7 +137,7 @@ Chris Nelson
 
 ---
 
-# Example: Airports on map
+# Example: [Airports on map](http://localhost:4000/airports)
 
 ---
 
@@ -152,6 +159,7 @@ Chris Nelson
 ---
 ## The view
 ```elixir
+  use LiveElements.CustomElementsHelpers
   custom_element :lit_google_map, events: [:bounds_changed, :tilesloaded]
 
   @impl true
@@ -173,6 +181,13 @@ Chris Nelson
   end
 
 ```
+---
+
+# To summarize
+- It's really easy to use Custom Elements in LiveView
+- Let LiveElements do the work for you
+- Use em just like any other functional component
+
 ---
 
 # Scenario the second
@@ -221,8 +236,6 @@ Chris Nelson
 @customElement('airport-map')
 @liveState({
   topic: 'airport_map',
-  url: 'ws://localhost:4000/socket',
-  properties: ['airports'],
   events: {
     send: ['tilesloaded', 'bounds_changed']
   }
@@ -232,7 +245,12 @@ export class AirportMapElement extends LitElement {
   @property({attribute: 'api-key'})
   apiKey: string = '';
 
+  @liveStateConfig('url')
+  @property()
+  url: string = '';
+
   @state()
+  @liveStateProperty()
   airports: Array<Airport> = [];
 
 ```
@@ -319,7 +337,7 @@ end
 
 ---
 
-# [LiveRoom](https://github.com/liveroom-app)
+# [LiveRoom](https://liveroom.app/)
 
 ---
 
@@ -328,6 +346,14 @@ end
 ---
 
 # [Launch Elements](https://elements.launchscout.com)
+
+---
+
+# Here is my radical suggestion in closing...
+
+---
+
+# We should use HTML to build web apps
 
 ---
 
