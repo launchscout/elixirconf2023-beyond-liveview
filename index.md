@@ -38,6 +38,7 @@ style: |
 # Beyond LiveView
 ### Getting the Javascript you need, keeping the Elixir you love
 Chris Nelson
+@superchris
 ![h:200](full-color.png#title-slide-logo)
 
 ---
@@ -325,11 +326,7 @@ end
 
 ---
 
-# [Tada?](airport_map.html)
-
----
-
-# But wait, there's [more](https://turbo-space-fishstick-j4jjg6q2g94.github.dev/)
+# [Tada](airport_map.html)
 
 ---
 
@@ -357,16 +354,10 @@ end
 
 ---
 
-# Links:
-* live_state elixir library: https://github.com/launchscout/live_state
-* phx-live-state client npm: https://github.com/launchscout/live-state
-* discord-element front end: https://github.com/launchscout/discord-element
-* discord-element back end: https://github.com/launchscout/discord_element
-* [Live comments demo](https://launchscout.github.io/test-livestate-comments/)
-
----
- 
-![h:400px](https://cdn.discordapp.com/attachments/564951236311253042/1012446048599416903/qr-chris-elixirconf-22.png)
-### github.com/launchscout/elixirconf_2022_livestate
+![link to slides](loop-rocket.gif)
+- slides: https://github.com/launchscout/elixirconf2023-beyond-liveview
+- live_elements: https://github.com/launchscout/live_elements
+- live_state elixir library: https://github.com/launchscout/live_state
+- phx-live-state client npm: https://github.com/launchscout/live-state
 
 ---
